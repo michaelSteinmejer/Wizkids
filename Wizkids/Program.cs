@@ -24,7 +24,8 @@ namespace Wizkids
                           " Christian's friend, John Cave-Brown, has the email address john.cave-brown@gmail.com." +
                           " John's daughter Kira studies at Oxford University and has the email adress Kira123@oxford.co.uk." +
                           " Her Twitter handle is @kira.cavebrown.";
-             ValidEmail(text);
+            string val = ValidEmail(text);
+            Console.WriteLine(val.ToString());
              Console.WriteLine("----------------");
             Console.ReadKey();
         }
@@ -73,9 +74,10 @@ namespace Wizkids
             }
         }
 
-        static void ValidEmail(string text)
+        static string ValidEmail(string text)
         {
-
+           string[] words = text.Split(" ");
+           string finalword = "";
             List<string> Email = new List<string>();
             const string MatchEmailPattern =
                 @"(([\w-]+\.)+[\w-]+|([a-zA-Z]{1}|[\w-]{2,}))@"
@@ -86,12 +88,38 @@ namespace Wizkids
 
             // Find matches.
             MatchCollection matches = rx.Matches(text);
-
+            Console.WriteLine("Matched to replace");
             foreach (Match match in matches)
             {
-                Console.WriteLine("Word to be replaced" + match.Value);
+                Console.WriteLine(match.Value);
             }
+            foreach (var word in words)
+            {
+                foreach (Match match in matches)
+                {
+                    if (word.StartsWith(match.Value))
+                    {
+                        finalword = "replaced";
+                        break;
+                    }
+                }
 
+                if (finalword=="")
+                {
+                    finalword = word;
+                }
+                Email.Add(finalword);
+                finalword = "";
+                
+            }
+            return ConvertStringArrayToStringJoin(Email);
+        }
+
+        static string ConvertStringArrayToStringJoin(List<string> array)
+        {
+            // Use string Join to concatenate the string elements.
+            string result = string.Join(" ", array);
+            return result;
         }
     }
 }
