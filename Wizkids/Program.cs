@@ -20,13 +20,13 @@ namespace Wizkids
             FooBar();
             Console.WriteLine("----------------");
             Console.WriteLine("Emails that are valid");
-            string text = " Christian has the email address christian+123@gmail.com." +
+            Console.WriteLine();
+            string text = "Christian has the email address christian+123@gmail.com." +
                           " Christian's friend, John Cave-Brown, has the email address john.cave-brown@gmail.com." +
                           " John's daughter Kira studies at Oxford University and has the email adress Kira123@oxford.co.uk." +
                           " Her Twitter handle is @kira.cavebrown.";
-            string val = ValidEmail(text);
-            Console.WriteLine(val.ToString());
-             Console.WriteLine("----------------");
+            Console.WriteLine(ValidEmail(text));
+            Console.WriteLine("----------------");
             Console.ReadKey();
         }
 
@@ -93,6 +93,7 @@ namespace Wizkids
             {
                 Console.WriteLine(match.Value);
             }
+            Console.WriteLine();
             foreach (var word in words)
             {
                 finalword = ReplaceEmail(matches, word, finalword);
@@ -114,7 +115,7 @@ namespace Wizkids
             {   
                 if (word.StartsWith(match.Value))
                 {
-                    finalword = "replaced";
+                    finalword = "replaced.";
                     break;
                 }
             }
