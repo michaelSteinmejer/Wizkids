@@ -95,14 +95,7 @@ namespace Wizkids
             }
             foreach (var word in words)
             {
-                foreach (Match match in matches)
-                {
-                    if (word.StartsWith(match.Value))
-                    {
-                        finalword = "replaced";
-                        break;
-                    }
-                }
+                finalword = ReplaceEmail(matches, word, finalword);
 
                 if (finalword=="")
                 {
@@ -113,6 +106,20 @@ namespace Wizkids
                 
             }
             return ConvertStringArrayToStringJoin(Email);
+        }
+
+        private static string ReplaceEmail(MatchCollection matches, string word, string finalword)
+        {
+            foreach (Match match in matches)
+            {   
+                if (word.StartsWith(match.Value))
+                {
+                    finalword = "replaced";
+                    break;
+                }
+            }
+
+            return finalword;
         }
 
         static string ConvertStringArrayToStringJoin(List<string> array)
