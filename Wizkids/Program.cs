@@ -88,7 +88,7 @@ namespace Wizkids
 
             // Find matches.
             MatchCollection matches = rx.Matches(text);
-            Console.WriteLine("Matched to replace");
+            Console.WriteLine("Emails to replace:");
             foreach (Match match in matches)
             {
                 Console.WriteLine(match.Value);
