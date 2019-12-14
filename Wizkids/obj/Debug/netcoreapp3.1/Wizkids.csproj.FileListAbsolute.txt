@@ -1,0 +1,11 @@
+C:\Source\CSharp\Wizkids\Wizkids\bin\Debug\netcoreapp3.1\Wizkids.exe
+C:\Source\CSharp\Wizkids\Wizkids\bin\Debug\netcoreapp3.1\Wizkids.deps.json
+C:\Source\CSharp\Wizkids\Wizkids\bin\Debug\netcoreapp3.1\Wizkids.runtimeconfig.json
+C:\Source\CSharp\Wizkids\Wizkids\bin\Debug\netcoreapp3.1\Wizkids.runtimeconfig.dev.json
+C:\Source\CSharp\Wizkids\Wizkids\bin\Debug\netcoreapp3.1\Wizkids.dll
+C:\Source\CSharp\Wizkids\Wizkids\bin\Debug\netcoreapp3.1\Wizkids.pdb
+C:\Source\CSharp\Wizkids\Wizkids\obj\Debug\netcoreapp3.1\Wizkids.csprojAssemblyReference.cache
+C:\Source\CSharp\Wizkids\Wizkids\obj\Debug\netcoreapp3.1\Wizkids.AssemblyInfoInputs.cache
+C:\Source\CSharp\Wizkids\Wizkids\obj\Debug\netcoreapp3.1\Wizkids.AssemblyInfo.cs
+C:\Source\CSharp\Wizkids\Wizkids\obj\Debug\netcoreapp3.1\Wizkids.dll
+C:\Source\CSharp\Wizkids\Wizkids\obj\Debug\netcoreapp3.1\Wizkids.pdb
