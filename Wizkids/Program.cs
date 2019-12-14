@@ -16,7 +16,10 @@ namespace Wizkids
             Console.WriteLine("Is not Palindrome");
             Console.WriteLine(IsPalindrome("civir"));
             Console.WriteLine("----------------");
-            Console.WriteLine("Email is valid");
+            Console.WriteLine("FooBar");
+            FooBar();
+            Console.WriteLine("----------------");
+            Console.WriteLine("Emails that are valid");
             string text = " Christian has the email address christian+123@gmail.com." +
                           " Christian's friend, John Cave-Brown, has the email address john.cave-brown@gmail.com." +
                           " John's daughter Kira studies at Oxford University and has the email adress Kira123@oxford.co.uk." +
@@ -86,7 +89,7 @@ namespace Wizkids
 
             foreach (Match match in matches)
             {
-                Console.WriteLine(match.Value);
+                Console.WriteLine("Word to be replaced" + match.Value);
             }
 
         }
